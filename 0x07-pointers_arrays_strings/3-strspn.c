@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _strspn - returns the index of the first character found
+ * _strspn - Entry point
  * @s: input
  * @accept: input
  * Return: Always 0 (Success)
@@ -8,18 +8,18 @@
 unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int n = 0;
-	int x;
+	int r;
 
 	while (*s)
 	{
-		for (x = 0; accept[r]; r++)
+		for (r = 0; accept[r]; r++)
 		{
-			if (*s == accept[x])
+			if (*s == accept[r])
 			{
 				n++;
 				break;
 			}
-			else if (accept[x + 1] == '\0')
+			else if (accept[r + 1] == '\0')
 				return (n);
 		}
 		s++;
