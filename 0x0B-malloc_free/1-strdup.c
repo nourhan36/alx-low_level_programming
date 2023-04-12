@@ -22,8 +22,8 @@ char *_strdup(char *x)
 	if (y == NULL)
 		return (NULL);
 
-	for (r = 0; str[r]; r++)
-		y[r] = str[r];
+	for (r = 0; x[r]; r++)
+		y[r] = x[r];
 
 	return (y);
 }
