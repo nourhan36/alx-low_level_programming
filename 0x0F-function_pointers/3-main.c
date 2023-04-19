@@ -5,7 +5,7 @@
 /**
  * main - Prints a result of an operation
  * @arg: number of arguments
- * @arr:marray of pointers
+ * @arr: array of pointers
  *
  * Return: Always 0.
  */
