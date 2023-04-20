@@ -3,7 +3,7 @@
 
 
 int _putchar(char c);
-int sum_them_all(const unsigned int x, ...);
+int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *sep, const unsigned int x, y);
 void print_strings(const char *sep, const unsigned int x, y);
 void print_all(const char * const args, y);
