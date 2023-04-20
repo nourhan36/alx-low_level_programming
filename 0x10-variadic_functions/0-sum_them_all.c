@@ -5,11 +5,11 @@
 /**
 * sum_them_all - Returns the sum of all paramters.
 * @x: number of paramters.
-* @y: A variable number of paramters to calculate the sum of.
+* @...: A variable number of paramters to calculate the sum of.
 *
 * Return: 0 or the sum of all parameters.
 */
-int sum_them_all(const unsigned int x, y)
+int sum_them_all(const unsigned int x, ...)
 {
 	va_list ap;
 	unsigned int i, sum = 0;
