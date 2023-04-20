@@ -3,23 +3,23 @@
 #include <stdio.h>
 
 /**
-* print_all - prints anything.
-* @args: types of arguments in function.
-*/
-void print_all(const char * const args, y)
+ * print_all - prints anything
+ * @format: list of types of arguments passed to the function
+ */
+void print_all(const char * const format, ...)
 {
 	int i = 0;
 	char *str, *sep = "";
 
 	va_list list;
 
-	va_start(list, args);
+	va_start(list, format);
 
-	if (args)
+	if (format)
 	{
-		while (args[i])
+		while (format[i])
 		{
-			switch (args[i])
+			switch (format[i])
 			{
 				case 'c':
 					printf("%s%c", sep, va_arg(list, int));
