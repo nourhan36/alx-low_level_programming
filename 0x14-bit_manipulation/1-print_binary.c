@@ -6,21 +6,21 @@
  */
 void print_binary(unsigned long int bin)
 {
-	int j, counter = 0;
-	unsigned long int curr;
+	int i, count = 0;
+	unsigned long int current;
 
-	for (j = 63; j >= 0; i--)
+	for (i = 63; i >= 0; i--)
 	{
-		curr = bin >> j;
+		current = bin >> i;
 
-		if (curr & 1)
+		if (current & 1)
 		{
 			_putchar('1');
-			counter++;
+			count++;
 		}
-		else if (counter)
+		else if (count)
 			_putchar('0');
 	}
-	if (!counter)
+	if (!count)
 		_putchar('0');
 }
