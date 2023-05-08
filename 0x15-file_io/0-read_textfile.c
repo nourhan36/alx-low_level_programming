@@ -5,23 +5,24 @@
  * read_textfile- Read text file.
  * @fn: the text file
  * @let: number of letters needed
- * Return: w- number of bytes read or 0
+ * Return: w- number of bytes or 0
  */
 ssize_t read_textfile(const char *fn, size_t let)
 {
-	char *ful;
-	ssize_t filed;
-	ssize_t x;
-	ssize_t y;
+	char *buf;
+	ssize_t fd;
+	ssize_t w;
+	ssize_t t;
 
-	filed = open(fn, O_RDONLY);
+	fd = open(fn, O_RDONLY);
 	if (fd == -1)
 		return (0);
-	ful = malloc(sizeof(char) * let);
-	y = read(filed, ful, let);
-	x = write(STDOUT_FILENO, ful, y);
+	buf = malloc(sizeof(char) * let);
+	t = read(fd, buf, let);
+	w = write(STDOUT_FILENO, buf, t);
 
-	free(ful);
-	close(filed);
-	return (x);
+	free(buf);
+	close(fd);
+	return (w);
+
 }
